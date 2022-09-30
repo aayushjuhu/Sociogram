@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Forgot password</title>
+        <link rel="icon" type="image/x-icon" href="Screenshot 2022-09-18 162919.ico">
+        <script>
+            function pro(){
+                var pw=document.getElementById('pword').value
+                var cpw=document.getElementById('cpword').value
+                if(pw==""|| pw==null || cpw==null || cpw==""){
+                    alert('password not filled')
+                }
+                else if(pw.length<8)
+                   alert("password should be of aleast 8 char")
+                else if(pw != cpw)
+                    alert("password does not match")
+                else 
+                    location.replace('prototype.html')
+            }
+        </script>
+    </head>
+    <body style="background-image:url('bgblur.png');">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster Two">
+        <img src="logo1.png" style="position:absolute; top: 10px; left: 10px; height: 100px;width: 200px;">
+        <form>
+            <div style="background-color:white; border-radius: 10px; height: 400px; width: 800px; border: 2px solid; position: relative;left: 400px; top: 100px;">
+                <h1 style="font-family:Lobster Two; font-size:48px" align="center">Set Password</h1>
+                <label style="position:relative; left: 200px; font-family:Lobster Two; font-size: 40px;">Password</label>
+                <input type="password" placeholder="Enter password" id="pword" required style="position:relative; left: 200px; font-size:28px; border-radius: 20px;border: 2px solid #0d859e;">
+                <br>
+                <label style="position:relative; left: 80px; font-family:Lobster Two; font-size: 40px;">Confirm Password</label>
+                <input type="password" placeholder="Enter password" id="cpword" required style="position:relative; left: 80px; font-size:28px; border-radius: 20px;border: 2px solid #0d859e;">
+                <br><br>
+                <button type="button" onclick="pro()" style="position:absolute; left:400px; top:280px; font-size: 28px; border-radius: 10px; border-width: 4px; border-color: #0d859e; background-color: white; color:black; font-family: Cambria;">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
